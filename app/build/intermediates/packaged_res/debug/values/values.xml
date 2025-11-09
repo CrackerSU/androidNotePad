@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_blue">#E3F2FD</color>
+    <color name="bg_dark">#121212</color>
+    <color name="bg_green">#E8F5E8</color>
+    <color name="bg_light">#FFFFFF</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="category_blue">#2196F3</color>
+    <color name="category_green">#4CAF50</color>
+    <color name="category_purple">#9C27B0</color>
+    <color name="category_red">#F44336</color>
+    <color name="category_yellow">#FFEB3B</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#2E7D32</color>
+    <color name="colorPrimaryDark">#1B5E20</color>
+    <string name="add_category">新增分类</string>
+    <string name="all_categories">全部分类</string>
+    <string name="app_name">NotePad</string>
+    <string name="button_ok">OK</string>
+    <string name="category_label">分类:</string>
+    <string name="category_manager_title">分类管理</string>
+    <string name="content_hint">请输入笔记内容</string>
+    <string name="delete_category">删除分类</string>
+    <string name="edit_category">编辑分类</string>
+    <string name="enter_category_name">请输入分类名称</string>
+    <string name="error_message">Error loading note</string>
+    <string name="error_title">Error</string>
+    <string name="live_folder_name">Notes</string>
+    <string name="manage_categories">管理分类</string>
+    <string name="menu_add">New note</string>
+    <string name="menu_copy">Copy</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_insert">新建</string>
+    <string name="menu_open">Open</string>
+    <string name="menu_paste">Paste</string>
+    <string name="menu_revert">Revert changes</string>
+    <string name="menu_save">Save</string>
+    <string name="no_due_date">未设置截止日期</string>
+    <string name="no_notes">暂无笔记</string>
+    <string name="no_todos">暂无待办事项</string>
+    <string name="nothing_to_save">There is nothing to save</string>
+    <string name="pick_date">选择日期</string>
+    <string name="resolve_edit">Edit note</string>
+    <string name="resolve_title">Edit title</string>
+    <string name="text_title">Title:</string>
+    <string name="title_create">New note</string>
+    <string name="title_create_todo">新建待办</string>
+    <string name="title_edit">Edit: %1$s</string>
+    <string name="title_edit_title">Note title:</string>
+    <string name="title_edit_todo">编辑待办</string>
+    <string name="title_hint">请输入笔记标题</string>
+    <string name="title_notes_list">Notes</string>
+    <string name="title_todos_list">待办事项</string>
+    <string name="todo_completed">已完成</string>
+    <string name="todo_description_hint">详细描述</string>
+    <string name="todo_title_hint">待办事项标题</string>
+    <string name="untitled">无标题</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#2E7D32</item>
+        <item name="colorPrimaryDark">#1B5E20</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="android:windowBackground">@drawable/bg_material</item>
+    </style>
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.DayNight">
+        <item name="colorPrimary">#2E7D32</item>
+        <item name="colorPrimaryDark">#1B5E20</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="android:windowBackground">@drawable/bg_dark</item>
+        <item name="colorOnSurface">#FFFFFF</item> 
+    </style>
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#2E7D32</item>
+        <item name="colorPrimaryDark">#1B5E20</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="android:windowBackground">@drawable/bg_material</item>
+    </style>
+</resources>

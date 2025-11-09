@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView android:id="@+id/color_white" android:layout_width="40dp" android:layout_height="40dp" android:background="#FFFFFF" android:layout_margin="4dp"/>
+        <!-- 其他颜色 -->
+    </LinearLayout>
+
+</selector>

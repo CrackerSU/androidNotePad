@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView android:id="@+id/color_white" android:layout_width="40dp" android:layout_height="40dp" android:background="#FFFFFF" android:layout_margin="4dp"/>
+    <ImageView android:id="@+id/color_yellow" android:layout_width="40dp" android:layout_height="40dp" android:background="#FFFF00" android:layout_margin="4dp"/>
+    <ImageView android:id="@+id/color_pink" android:layout_width="40dp" android:layout_height="40dp" android:background="#FFC0CB" android:layout_margin="4dp"/>
+    <ImageView android:id="@+id/color_blue" android:layout_width="40dp" android:layout_height="40dp" android:background="#87CEEB" android:layout_margin="4dp"/>
+    <ImageView android:id="@+id/color_green" android:layout_width="40dp" android:layout_height="40dp" android:background="#90EE90" android:layout_margin="4dp"/>
+</LinearLayout>

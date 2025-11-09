@@ -1,0 +1,568 @@
+C:\Users\21726\Desktop\NotePad-master\app\src\main\AndroidManifest.xml:19: Warning: READ_EXTERNAL_STORAGE is deprecated (and is not granted) when targeting Android 13+. If you need to query or interact with MediaStore or media files on the shared storage, you should instead use one or more new storage permissions: READ_MEDIA_IMAGES, READ_MEDIA_VIDEO or READ_MEDIA_AUDIO. [ScopedStorage]
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\AndroidManifest.xml:20: Warning: WRITE_EXTERNAL_STORAGE is deprecated (and is not granted) when targeting Android 13+. If you need to write to shared storage, use the MediaStore.createWriteRequest intent. [ScopedStorage]
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ScopedStorage":
+   Scoped storage is enforced on Android 10+ (or Android 11+ if using
+   requestLegacyExternalStorage). In particular, WRITE_EXTERNAL_STORAGE will
+   no longer provide write access to all files; it will provide the equivalent
+   of READ_EXTERNAL_STORAGE instead.
+
+   As of Android 13, if you need to query or interact with MediaStore or media
+   files on the shared storage, you should be using instead one or more new
+   storage permissions:
+   * android.permission.READ_MEDIA_IMAGES
+   * android.permission.READ_MEDIA_VIDEO
+   * android.permission.READ_MEDIA_AUDIO
+
+   and then add maxSdkVersion="33" to the older permission. See the developer
+   guide for how to do this:
+   https://developer.android.com/about/versions/13/behavior-changes-13#granula
+   r-media-permissions
+
+   The MANAGE_EXTERNAL_STORAGE permission can be used to manage all files, but
+   it is rarely necessary and most apps on Google Play are not allowed to use
+   it. Most apps should instead migrate to use scoped storage. To modify or
+   delete files, apps should request write access from the user as described
+   at https://goo.gle/android-mediastore-createwriterequest.
+
+   To learn more, read these resources: Play policy:
+   https://goo.gle/policy-storage-help Allowable use cases:
+   https://goo.gle/policy-storage-usecases
+
+   https://goo.gle/android-storage-usecases
+
+C:\Users\21726\Desktop\NotePad-master\app\build.gradle:12: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdkVersion 34
+        ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\bg_material.xml:6: Warning: Attribute tileModeX is only used in API level 21 and higher (current min is 14) [UnusedAttribute]
+             <bitmap android:src="@drawable/paper_lines" android:tileModeX="repeat" android:tileModeY="repeat"/>
+                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\bg_material.xml:6: Warning: Attribute tileModeY is only used in API level 21 and higher (current min is 14) [UnusedAttribute]
+             <bitmap android:src="@drawable/paper_lines" android:tileModeX="repeat" android:tileModeY="repeat"/>
+                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\edit_text_background.xml:8: Warning: Attribute tileModeX is only used in API level 21 and higher (current min is 14) [UnusedAttribute]
+                android:tileModeX="repeat"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\edit_text_background.xml:9: Warning: Attribute tileModeY is only used in API level 21 and higher (current min is 14) [UnusedAttribute]
+                android:tileModeY="repeat"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\notes_list.xml:55: Warning: Attribute titleTextColor is only used in API level 23 and higher (current min is 14) [UnusedAttribute]
+        android:titleTextColor="@android:color/white" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\edit_text_background.xml:12: Warning: This item is unreachable because a previous item (item #1) is a more general match than this one [StateListReachable]
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+    ^
+    C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\edit_text_background.xml:3: Earlier item which masks item
+
+   Explanation for issues of type "StateListReachable":
+   In a selector, only the last child in the state list should omit a state
+   qualifier. If not, all subsequent items in the list will be ignored since
+   the given item will match all.
+
+C:\Users\21726\Desktop\NotePad-master\app\build.gradle:32: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
+        implementation 'androidx.appcompat:appcompat:1.6.1'
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\build.gradle:33: Warning: A newer version of androidx.core:core than 1.10.1 is available: 1.17.0 [GradleDependency]
+        implementation 'androidx.core:core:1.10.1'
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\build.gradle:34: Warning: A newer version of com.google.android.material:material than 1.9.0 is available: 1.10.0 [GradleDependency]
+        implementation 'com.google.android.material:material:1.9.0'
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\build.gradle:35: Warning: A newer version of androidx.test:runner than 1.5.2 is available: 1.7.0 [GradleDependency]
+        androidTestImplementation 'androidx.test:runner:1.5.2'
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\note_editor.xml:76: Warning: android:capitalize is deprecated: Use inputType instead [Deprecated]
+        android:capitalize="sentences"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\note_editor.xml:121: Warning: android:capitalize is deprecated: Use inputType instead [Deprecated]
+        android:capitalize="sentences"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\title_editor.xml:34: Warning: android:capitalize is deprecated: Use inputType instead [Deprecated]
+        android:capitalize="sentences"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Deprecated":
+   Deprecated views, attributes and so on are deprecated because there is a
+   better way to do something. Do it that new way. You've been warned.
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\title_editor.xml:42: Warning: Use databinding or explicit wiring of click listener in code [UsingOnClickInXml from androidx.appcompat]
+        android:onClick="onClickOk" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UsingOnClickInXml":
+   Old versions of the platform do not properly support resolving
+   android:onClick
+
+   Vendor: Android Open Source Project
+   Identifier: androidx.appcompat
+   Feedback: https://issuetracker.google.com/issues/new?component=460343
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\bg_dark.xml:2: Warning: The resource R.drawable.bg_dark appears to be unused [UnusedResources]
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+    ^
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\colors.xml:4: Warning: The resource R.color.colorPrimaryDark appears to be unused [UnusedResources]
+    <color name="colorPrimaryDark">#1B5E20</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\colors.xml:7: Warning: The resource R.color.bg_dark appears to be unused [UnusedResources]
+    <color name="bg_dark">#121212</color>
+           ~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\dialog_color_picker.xml:2: Warning: The resource R.drawable.dialog_color_picker appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\edit_text_background.xml:2: Warning: The resource R.drawable.edit_text_background appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\ic_add_circle.xml:2: Warning: The resource R.drawable.ic_add_circle appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\lines_pattern.xml:2: Warning: The resource R.drawable.lines_pattern appears to be unused [UnusedResources]
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\menu\main_menu.xml:3: Warning: The resource R.menu.main_menu appears to be unused [UnusedResources]
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\notes_list_with_category.xml:2: Warning: The resource R.layout.notes_list_with_category appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:22: Warning: The resource R.string.title_create appears to be unused [UnusedResources]
+    <string name="title_create">New note</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:23: Warning: The resource R.string.title_edit appears to be unused [UnusedResources]
+    <string name="title_edit">Edit: %1$s</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:26: Warning: The resource R.string.menu_add appears to be unused [UnusedResources]
+    <string name="menu_add">New note</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:35: Warning: The resource R.string.text_title appears to be unused [UnusedResources]
+    <string name="text_title">Title:</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:42: Warning: The resource R.string.nothing_to_save appears to be unused [UnusedResources]
+    <string name="nothing_to_save">There is nothing to save</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:44: Warning: The resource R.string.untitled appears to be unused [UnusedResources]
+    <string name="untitled">无标题</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:48: Warning: The resource R.string.title_create_todo appears to be unused [UnusedResources]
+    <string name="title_create_todo">新建待办</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:49: Warning: The resource R.string.title_edit_todo appears to be unused [UnusedResources]
+    <string name="title_edit_todo">编辑待办</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:50: Warning: The resource R.string.todo_title_hint appears to be unused [UnusedResources]
+    <string name="todo_title_hint">待办事项标题</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:51: Warning: The resource R.string.todo_description_hint appears to be unused [UnusedResources]
+    <string name="todo_description_hint">详细描述</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:52: Warning: The resource R.string.todo_completed appears to be unused [UnusedResources]
+    <string name="todo_completed">已完成</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:53: Warning: The resource R.string.no_due_date appears to be unused [UnusedResources]
+    <string name="no_due_date">未设置截止日期</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:54: Warning: The resource R.string.pick_date appears to be unused [UnusedResources]
+    <string name="pick_date">选择日期</string>
+            ~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:55: Warning: The resource R.string.no_todos appears to be unused [UnusedResources]
+    <string name="no_todos">暂无待办事项</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:58: Warning: The resource R.string.all_categories appears to be unused [UnusedResources]
+    <string name="all_categories">全部分类</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:61: Warning: The resource R.string.enter_category_name appears to be unused [UnusedResources]
+    <string name="enter_category_name">请输入分类名称</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:63: Warning: The resource R.string.title_hint appears to be unused [UnusedResources]
+    <string name="title_hint">请输入笔记标题</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:64: Warning: The resource R.string.content_hint appears to be unused [UnusedResources]
+    <string name="content_hint">请输入笔记内容</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\strings.xml:65: Warning: The resource R.string.no_notes appears to be unused [UnusedResources]
+    <string name="no_notes">暂无笔记</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\styles.xml:14: Warning: The resource R.style.Theme_NotePad appears to be unused [UnusedResources]
+    <style name="Theme.NotePad" parent="Theme.AppCompat.Light.DarkActionBar">
+           ~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\values\styles.xml:22: Warning: The resource R.style.AppTheme_Dark appears to be unused [UnusedResources]
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.DayNight">
+           ~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\todo_editor.xml:2: Warning: The resource R.layout.todo_editor appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\todos_list.xml:2: Warning: The resource R.layout.todos_list appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\menu\todos_list_options_menu.xml:2: Warning: The resource R.menu.todos_list_options_menu appears to be unused [UnusedResources]
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\todos_row.xml:2: Warning: The resource R.layout.todos_row appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\bg_material.xml:3: Warning: This namespace declaration is redundant [RedundantNamespace]
+    <layer-list-drawable xmlns:android="http://schemas.android.com/apk/res/android">
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\dialog_color_picker.xml:3: Warning: This namespace declaration is redundant [RedundantNamespace]
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\edit_text_background.xml:3: Warning: This namespace declaration is redundant [RedundantNamespace]
+    <layer-list-drawable xmlns:android="http://schemas.android.com/apk/res/android">
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\edit_text_background.xml:12: Warning: This namespace declaration is redundant [RedundantNamespace]
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\ic_add_circle.xml:3: Warning: This namespace declaration is redundant [RedundantNamespace]
+    <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\note_editor.xml:109: Warning: This namespace declaration is redundant [RedundantNamespace]
+    <view xmlns:android="http://schemas.android.com/apk/res/android"
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\noteslist_item.xml:45: Warning: This namespace declaration is redundant [RedundantNamespace]
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RedundantNamespace":
+   In Android XML documents, only specify the namespace on the root/document
+   element. Namespace declarations elsewhere in the document are typically
+   accidental leftovers from copy/pasting XML from other files or
+   documentation.
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\noteslist_item.xml:45: Warning: Unused namespace declaration xmlns:android; already declared on the root element [UnusedNamespace]
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedNamespace":
+   Unused namespace declarations take up space and require processing that is
+   not necessary
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\app_notes.png: Warning: Found bitmap drawable res/drawable/app_notes.png in densityless folder [IconLocation]
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\ic_menu_compose.png: Warning: Found bitmap drawable res/drawable/ic_menu_compose.png in densityless folder [IconLocation]
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\ic_menu_delete.png: Warning: Found bitmap drawable res/drawable/ic_menu_delete.png in densityless folder [IconLocation]
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\ic_menu_edit.png: Warning: Found bitmap drawable res/drawable/ic_menu_edit.png in densityless folder [IconLocation]
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\ic_menu_revert.png: Warning: Found bitmap drawable res/drawable/ic_menu_revert.png in densityless folder [IconLocation]
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\ic_menu_save.png: Warning: Found bitmap drawable res/drawable/ic_menu_save.png in densityless folder [IconLocation]
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\drawable\live_folder_notes.png: Warning: Found bitmap drawable res/drawable/live_folder_notes.png in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res: Warning: Missing density variation folders in src\main\res: drawable-mdpi, drawable-xhdpi, drawable-xxhdpi [IconMissingDensityFolder]
+
+   Explanation for issues of type "IconMissingDensityFolder":
+   Icons will look best if a custom version is provided for each of the major
+   screen density classes (low, medium, high, extra-high, extra-extra-high).
+   This lint check identifies folders which are missing, such as
+   drawable-hdpi.
+
+   Low density is not really used much anymore, so this check ignores the ldpi
+   density. To force lint to include it, set the environment variable
+   ANDROID_LINT_INCLUDE_LDPI=true. For more information on current density
+   usage, see https://developer.android.com/about/dashboards
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_add_category.xml:28: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_add_category.xml:35: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+
+   Explanation for issues of type "ButtonStyle":
+   Button bars typically use a borderless style for the buttons. Set the
+   style="?android:attr/buttonBarButtonStyle" attribute on each of the
+   buttons, and set style="?android:attr/buttonBarStyle" on the parent layout
+
+   https://material.io/components/dialogs/
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_add_category.xml:15: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_color_picker.xml:8: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView android:id="@+id/color_white" android:layout_width="40dp" android:layout_height="40dp" android:background="#FFFFFF" android:layout_margin="4dp"/>
+     ~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_color_picker.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView android:id="@+id/color_yellow" android:layout_width="40dp" android:layout_height="40dp" android:background="#FFFF00" android:layout_margin="4dp"/>
+     ~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_color_picker.xml:10: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView android:id="@+id/color_pink" android:layout_width="40dp" android:layout_height="40dp" android:background="#FFC0CB" android:layout_margin="4dp"/>
+     ~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_color_picker.xml:11: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView android:id="@+id/color_blue" android:layout_width="40dp" android:layout_height="40dp" android:background="#87CEEB" android:layout_margin="4dp"/>
+     ~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_color_picker.xml:12: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView android:id="@+id/color_green" android:layout_width="40dp" android:layout_height="40dp" android:background="#90EE90" android:layout_margin="4dp"/>
+     ~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\notes_list.xml:30: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\notes_list.xml:38: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\noteslist_item.xml:31: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\title_editor.xml:25: Warning: Missing accessibility label: where minSdk < 17, you should provide an android:hint [LabelFor]
+    <EditText android:id="@+id/title"
+     ~~~~~~~~
+
+   Explanation for issues of type "LabelFor":
+   Editable text fields should provide an android:hint or, provided your
+   minSdkVersion is at least 17, they may be referenced by a view with a
+   android:labelFor attribute.
+
+   When using android:labelFor, be sure to provide an android:text or an
+   android:contentDescription.
+
+   If your view is labeled but by a label in a different layout which includes
+   this one, just suppress this warning from lint.
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\java\com\example\android\notepad\NotesList.java:714: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            categoryView.setText("分类: " + category);
+                                 ~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\activity_settings.xml:11: Warning: Hardcoded string "选择主题", should use @string resource [HardcodedText]
+        android:text="选择主题"
+        ~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\activity_settings.xml:25: Warning: Hardcoded string "浅色主题", should use @string resource [HardcodedText]
+            android:text="浅色主题" />
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\activity_settings.xml:31: Warning: Hardcoded string "深色主题", should use @string resource [HardcodedText]
+            android:text="深色主题" />
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\activity_settings.xml:37: Warning: Hardcoded string "选择背景颜色", should use @string resource [HardcodedText]
+        android:text="选择背景颜色"
+        ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\activity_settings.xml:52: Warning: Hardcoded string "白色", should use @string resource [HardcodedText]
+            android:text="白色" />
+            ~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\activity_settings.xml:58: Warning: Hardcoded string "蓝色", should use @string resource [HardcodedText]
+            android:text="蓝色" />
+            ~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\activity_settings.xml:64: Warning: Hardcoded string "绿色", should use @string resource [HardcodedText]
+            android:text="绿色" />
+            ~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\category_list_item.xml:28: Warning: Hardcoded string "分类管理", should use @string resource [HardcodedText]
+        android:text="分类管理"
+        ~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_add_category.xml:11: Warning: Hardcoded string "请输入分类名称", should use @string resource [HardcodedText]
+        android:text="请输入分类名称"
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_add_category.xml:19: Warning: Hardcoded string "例如：工作、生活、学习", should use @string resource [HardcodedText]
+        android:hint="例如：工作、生活、学习"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_add_category.xml:33: Warning: Hardcoded string "取消", should use @string resource [HardcodedText]
+            android:text="取消" />
+            ~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_add_category.xml:40: Warning: Hardcoded string "保存", should use @string resource [HardcodedText]
+            android:text="保存" />
+            ~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_category_edit.xml:14: Warning: Hardcoded string "输入分类名称", should use @string resource [HardcodedText]
+        android:hint="输入分类名称" />
+        ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\dialog_category_edit.xml:20: Warning: Hardcoded string "选择颜色:", should use @string resource [HardcodedText]
+        android:text="选择颜色:"
+        ~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\menu\list_options_menu.xml:12: Warning: Hardcoded string "分类管理", should use @string resource [HardcodedText]
+        android:title="分类管理"
+        ~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\menu\main_menu.xml:7: Warning: Hardcoded string "设置", should use @string resource [HardcodedText]
+        android:title="设置"
+        ~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\note_editor.xml:74: Warning: Hardcoded string "请输入笔记标题", should use @string resource [HardcodedText]
+        android:hint="请输入笔记标题"
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\note_editor.xml:89: Warning: Hardcoded string "请输入笔记内容", should use @string resource [HardcodedText]
+        android:hint="请输入笔记内容"
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\noteslist_item.xml:66: Warning: Hardcoded string "Title", should use @string resource [HardcodedText]
+            android:text="Title" />
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\noteslist_item.xml:78: Warning: Hardcoded string "Date", should use @string resource [HardcodedText]
+            android:text="Date" />
+            ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\noteslist_item.xml:51: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+            android:paddingLeft="5dip"
+            ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlSymmetry":
+   If you specify padding or margin on the left side of a layout, you should
+   probably also specify padding on the right side (and vice versa) for
+   right-to-left layout symmetry.
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\noteslist_item.xml:51: Warning: Consider adding android:paddingStart="5dip" to better support right-to-left layouts [RtlHardcoded]
+            android:paddingLeft="5dip"
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\21726\Desktop\NotePad-master\app\src\main\res\layout\title_editor.xml:40: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+        android:layout_gravity="right"
+                                ~~~~~
+
+   Explanation for issues of type "RtlHardcoded":
+   Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
+   rendered in locales where text flows from right to left. Use Gravity#START
+   and Gravity#END instead. Similarly, in XML gravity and layout_gravity
+   attributes, use start rather than left.
+
+   For XML attributes such as paddingLeft and layout_marginLeft, use
+   paddingStart and layout_marginStart. NOTE: If your minSdkVersion is less
+   than 17, you should add both the older left/right attributes as well as the
+   new start/end attributes. On older platforms, where RTL is not supported
+   and the start/end attributes are unknown and therefore ignored, you need
+   the older left/right attributes. There is a separate lint check which
+   catches that type of error.
+
+   (Note: For Gravity#LEFT and Gravity#START, you can use these constants even
+   when targeting older platforms, because the start bitmask is a superset of
+   the left bitmask. Therefore, you can use gravity="start" rather than
+   gravity="left|start".)
+
+C:\Users\21726\Desktop\NotePad-master\app\src\main\AndroidManifest.xml: Warning: The project references RTL attributes, but does not explicitly enable or disable RTL support with android:supportsRtl in the manifest [RtlEnabled]
+
+   Explanation for issues of type "RtlEnabled":
+   To enable right-to-left support, when running on API 17 and higher, you
+   must set the android:supportsRtl attribute in the manifest <application>
+   element.
+
+   If you have started adding RTL attributes, but have not yet finished the
+   migration, you can set the attribute to false to satisfy this lint check.
+
+0 errors, 104 warnings

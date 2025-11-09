@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <string name="app_name">NotePad</string>
+    <string name="live_folder_name">Notes</string>
+
+    <string name="title_edit_title">Note title:</string>
+    <string name="title_create">New note</string>
+    <string name="title_edit">Edit: %1$s</string>
+    <string name="title_notes_list">Notes</string>
+
+    <string name="menu_add">New note</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_open">Open</string>
+    <string name="menu_revert">Revert changes</string>
+    <string name="menu_copy">Copy</string>
+    <string name="menu_paste">Paste</string>
+
+    <string name="button_ok">OK</string>
+    <string name="text_title">Title:</string>
+
+    <string name="resolve_edit">Edit note</string>
+    <string name="resolve_title">Edit title</string>
+
+    <string name="error_title">Error</string>
+    <string name="error_message">Error loading note</string>
+    <string name="nothing_to_save">There is nothing to save</string>
+
+    <string name="untitled">无标题</string>
+    <string name="menu_insert">新建</string>
+
+    <string name="title_todos_list">待办事项</string>
+    <string name="title_create_todo">新建待办</string>
+    <string name="title_edit_todo">编辑待办</string>
+    <string name="todo_title_hint">待办事项标题</string>
+    <string name="todo_description_hint">详细描述</string>
+    <string name="todo_completed">已完成</string>
+    <string name="no_due_date">未设置截止日期</string>
+    <string name="pick_date">选择日期</string>
+    <string name="no_todos">暂无待办事项</string>
+
+    <string name="category_label">分类:</string>
+    <string name="all_categories">全部分类</string>
+
+    <string name="delete_category">删除分类</string>
+    <string name="enter_category_name">请输入分类名称</string>
+
+    <string name="title_hint">请输入笔记标题</string>
+    <string name="content_hint">请输入笔记内容</string>
+    <string name="no_notes">暂无笔记</string>
+    <string name="edit_category">编辑分类</string>
+    <string name="category_manager_title">分类管理</string>
+    <string name="add_category">新增分类</string>
+    <string name="manage_categories">管理分类</string>
+
+</resources>

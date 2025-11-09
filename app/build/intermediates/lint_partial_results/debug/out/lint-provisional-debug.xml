@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.1.0" type="conditional_incidents">
+
+    <incident
+        id="ScopedStorage"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*sourceProvider*0*manifest*0}"
+            line="19"
+            column="36"
+            startOffset="827"
+            endLine="19"
+            endColumn="76"
+            endOffset="867"/>
+        <map>
+            <entry
+                name="maxSdkVersion"
+                int="2147483647"/>
+            <entry
+                name="read"
+                boolean="true"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ScopedStorage"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*sourceProvider*0*manifest*0}"
+            line="20"
+            column="36"
+            startOffset="907"
+            endLine="20"
+            endColumn="77"
+            endOffset="948"/>
+        <map>
+            <entry
+                name="maxSdkVersion"
+                int="2147483647"/>
+            <entry
+                name="read"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="ffffffffffffe000" requiresApi="fffffffffff00000"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/bg_material.xml"
+            line="6"
+            column="58"
+            startOffset="324"
+            endLine="6"
+            endColumn="84"
+            endOffset="350"/>
+        <map>
+            <api-levels id="minSdk"
+                value="ffffffffffffe000"/>
+            <api-levels id="requiresApi"
+                value="fffffffffff00000"/>
+            <entry
+                name="message"
+                string="Attribute `tileModeX` is only used in API level 21 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="ffffffffffffe000" requiresApi="fffffffffff00000"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/bg_material.xml"
+            line="6"
+            column="85"
+            startOffset="351"
+            endLine="6"
+            endColumn="111"
+            endOffset="377"/>
+        <map>
+            <api-levels id="minSdk"
+                value="ffffffffffffe000"/>
+            <api-levels id="requiresApi"
+                value="fffffffffff00000"/>
+            <entry
+                name="message"
+                string="Attribute `tileModeY` is only used in API level 21 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="ffffffffffffe000" requiresApi="fffffffffff00000"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/edit_text_background.xml"
+            line="8"
+            column="17"
+            startOffset="357"
+            endLine="8"
+            endColumn="43"
+            endOffset="383"/>
+        <map>
+            <api-levels id="minSdk"
+                value="ffffffffffffe000"/>
+            <api-levels id="requiresApi"
+                value="fffffffffff00000"/>
+            <entry
+                name="message"
+                string="Attribute `tileModeX` is only used in API level 21 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="ffffffffffffe000" requiresApi="fffffffffff00000"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/edit_text_background.xml"
+            line="9"
+            column="17"
+            startOffset="401"
+            endLine="9"
+            endColumn="43"
+            endOffset="427"/>
+        <map>
+            <api-levels id="minSdk"
+                value="ffffffffffffe000"/>
+            <api-levels id="requiresApi"
+                value="fffffffffff00000"/>
+            <entry
+                name="message"
+                string="Attribute `tileModeY` is only used in API level 21 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginRight"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/category_list_item.xml"
+            line="14"
+            column="9"
+            startOffset="487"
+            endLine="14"
+            endColumn="35"
+            endOffset="513"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginRight"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/note_editor.xml"
+            line="59"
+            column="13"
+            startOffset="2303"
+            endLine="59"
+            endColumn="39"
+            endOffset="2329"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="Deprecated"
+        severity="warning"
+        message="`android:capitalize` is deprecated: Use `inputType` instead">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/note_editor.xml"
+            line="76"
+            column="9"
+            startOffset="2874"
+            endLine="76"
+            endColumn="39"
+            endOffset="2904"/>
+        <map>
+            <condition minGE="fffffffffffffffc"/>
+        </map>
+    </incident>
+
+    <incident
+        id="Deprecated"
+        severity="warning"
+        message="`android:capitalize` is deprecated: Use `inputType` instead">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/note_editor.xml"
+            line="121"
+            column="9"
+            startOffset="4555"
+            endLine="121"
+            endColumn="39"
+            endOffset="4585"/>
+        <map>
+            <condition minGE="fffffffffffffffc"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="ffffffffffffe000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/notes_list.xml"
+            line="55"
+            column="9"
+            startOffset="2168"
+            endLine="55"
+            endColumn="54"
+            endOffset="2213"/>
+        <map>
+            <api-levels id="minSdk"
+                value="ffffffffffffe000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `titleTextColor` is only used in API level 23 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginRight"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/noteslist_item.xml"
+            line="28"
+            column="9"
+            startOffset="1082"
+            endLine="28"
+            endColumn="35"
+            endOffset="1108"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginLeft"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginLeft"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/noteslist_item.xml"
+            line="43"
+            column="9"
+            startOffset="1544"
+            endLine="43"
+            endColumn="34"
+            endOffset="1569"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/noteslist_item.xml"
+            line="51"
+            column="13"
+            startOffset="1949"
+            endLine="51"
+            endColumn="32"
+            endOffset="1968"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider adding `android:paddingStart=&quot;5dip&quot;` to better support right-to-left layouts">
+        <fix-attribute
+            description="Add android:paddingStart=&quot;5dip&quot;"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="paddingStart"
+            value="5dip"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/noteslist_item.xml"
+            line="51"
+            column="13"
+            startOffset="1949"
+            endLine="51"
+            endColumn="32"
+            endOffset="1968"/>
+        <map>
+            <entry
+                name="applies"
+                int="4"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:paddingLeft` with `android:paddingStart=&quot;5dip&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:paddingStart=&quot;5dip&quot;"
+            oldString="paddingLeft"
+            replacement="paddingStart"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/noteslist_item.xml"
+            line="51"
+            column="13"
+            startOffset="1949"
+            endLine="51"
+            endColumn="32"
+            endOffset="1968"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="Deprecated"
+        severity="warning"
+        message="`android:capitalize` is deprecated: Use `inputType` instead">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/title_editor.xml"
+            line="34"
+            column="9"
+            startOffset="1335"
+            endLine="34"
+            endColumn="39"
+            endOffset="1365"/>
+        <map>
+            <condition minGE="fffffffffffffffc"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/title_editor.xml"
+            line="40"
+            column="33"
+            startOffset="1566"
+            endLine="40"
+            endColumn="38"
+            endOffset="1571"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/title_editor.xml"
+            line="42"
+            column="9"
+            startOffset="1622"
+            endLine="42"
+            endColumn="36"
+            endOffset="1649"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LabelFor"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/title_editor.xml"
+            line="25"
+            column="6"
+            startOffset="967"
+            endLine="25"
+            endColumn="14"
+            endOffset="975"/>
+        <map>
+            <entry
+                name="hint"
+                boolean="false"/>
+            <entry
+                name="label"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginLeft"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginLeft"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/todos_row.xml"
+            line="19"
+            column="9"
+            startOffset="673"
+            endLine="19"
+            endColumn="34"
+            endOffset="698"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlEnabled"
+        severity="warning"
+        message="The project references RTL attributes, but does not explicitly enable or disable RTL support with `android:supportsRtl` in the manifest">
+        <location
+            file="${:app*debug*sourceProvider*0*manifest*0}"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+</incidents>
