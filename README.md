@@ -16,21 +16,21 @@ NotePad记事本应用是一款基于Android平台的轻量级笔记管理工具
   1.基本功能扩展
   
     1.1 时间戳显示：在笔记列表界面中，每个笔记条目现在都会显示创建或修改的时间戳
-      <img width="347" height="495" alt="image" src="https://github.com/user-attachments/assets/4a7ff07a-97de-4829-acce-154040935306" />
+<img width="347" height="495" alt="image" src="https://github.com/user-attachments/assets/4a7ff07a-97de-4829-acce-154040935306" />
     
   如图所示，每条笔记标题下方都有时间戳显示，记录了每条笔记创建或上次修改时的具体时间，且笔记列表会根据时间先后来排序。
 
     1.2 笔记查询功能：支持根据标题或内容关键词进行快速搜索定位
     
-      <img width="453" height="804" alt="940d147f5b26712ce8ef4da1f96b6e60" src="https://github.com/user-attachments/assets/7495b0e4-ea3c-48a3-8b1f-ea8088c1b8f6" />
+<img width="453" height="804" alt="940d147f5b26712ce8ef4da1f96b6e60" src="https://github.com/user-attachments/assets/7495b0e4-ea3c-48a3-8b1f-ea8088c1b8f6" />
 
   如图所示，笔记列表上方有一个搜索栏，点击“放大镜”即可在输入栏输入要搜索的关键字，输入完毕后将会自动展示含有关键字的笔记，可根据笔记标题或内容搜索。
   
-      <img width="474" height="834" alt="8c1d46e06bd0196c6ab7d64933e7d5d4" src="https://github.com/user-attachments/assets/0497417a-37da-4e34-962b-7d8707c85fad" />
+<img width="474" height="834" alt="8c1d46e06bd0196c6ab7d64933e7d5d4" src="https://github.com/user-attachments/assets/0497417a-37da-4e34-962b-7d8707c85fad" />
 
   如图所示，输入“学习”后下方展示了标题含有该关键词的两条笔记。
   
-      <img width="447" height="765" alt="205daee4e47d102cb89d3dbd85c0790f" src="https://github.com/user-attachments/assets/7fc73d1c-0a6a-4865-9619-cb128fb467b0" />
+<img width="447" height="765" alt="205daee4e47d102cb89d3dbd85c0790f" src="https://github.com/user-attachments/assets/7fc73d1c-0a6a-4865-9619-cb128fb467b0" />
 
   如图所示，输入关键词后下方展示了笔记内容含有该关键词的一条笔记。
   
