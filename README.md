@@ -9,7 +9,8 @@ This is an AndroidStudio rebuild of google SDK sample NotePad
 
 2.扩展功能实现
 UI美化：对应用界面进行了优化，包括主题设定、背景更换和编辑器优化
-笔记分类：实现了笔记的分类管理功能，用户可以创建不同的分类文件夹来组织笔记
+笔记分类：实现了笔记的分类管理功能，用户可以创建不同的分类文件夹来组织笔记<img width="462" height="810" alt="009a570bb2ad460afed7dd7653d36c21" src="https://github.com/user-attachments/assets/f1609dff-a2ef-4c76-8ead-7dc9a23e9932" />
+
 
 三、总结
 通过本次实验，我深入掌握了Android应用开发中的数据存储技术、界面优化方法和功能模块设计。特别是在数据库操作和用户交互设计方面积累了宝贵经验。
