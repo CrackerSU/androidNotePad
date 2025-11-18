@@ -73,6 +73,7 @@ public class SettingsActivity extends AppCompatActivity {
                 case "green":
                     ((RadioButton) findViewById(R.id.bg_green)).setChecked(true);
                     break;
+
                 default: // white or default
                     ((RadioButton) findViewById(R.id.bg_white)).setChecked(true);
                     break;

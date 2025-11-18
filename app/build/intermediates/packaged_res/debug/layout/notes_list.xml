@@ -10,14 +10,16 @@
         android:id="@+id/search_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp" />
+        android:layout_margin="8dp"
+        android:textColor="?attr/colorOnSurface"/>
 
     <!-- 分类选择器 -->
     <Spinner
         android:id="@+id/category_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp" />
+        android:layout_margin="8dp"
+        android:textColor="?attr/colorOnSurface"/>
 
     <!-- 笔记列表 -->
     <ListView
@@ -25,7 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:drawSelectorOnTop="false" />
+        android:drawSelectorOnTop="false"
+        android:textColor="?attr/colorOnSurface"/>
 
     <!-- 悬浮按钮容器 -->
     <LinearLayout
@@ -45,7 +48,8 @@
             android:layout_marginRight="16dp"
             android:src="@android:drawable/ic_menu_add"
             app:elevation="8dp"
-            app:pressedTranslationZ="12dp" />
+            app:pressedTranslationZ="12dp"
+            app:backgroundTint="@color/colorPrimary"/>
 
         <!-- 设置按钮 -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -54,66 +58,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:src="@android:drawable/ic_menu_preferences"
-            app:backgroundTint="@color/colorAccent"
+            app:backgroundTint="@color/colorPrimary"
             app:elevation="8dp"
             app:pressedTranslationZ="12dp" />
     </LinearLayout>
 </LinearLayout>
 
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    android:orientation="vertical">-->
-
-<!--    &lt;!&ndash; 搜索栏 &ndash;&gt;-->
-<!--    <androidx.appcompat.widget.SearchView-->
-<!--        android:id="@+id/search_view"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="8dp" />-->
-
-<!--    &lt;!&ndash; 分类选择器 &ndash;&gt;-->
-<!--    <Spinner-->
-<!--        android:id="@+id/category_spinner"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="8dp" />-->
-
-<!--    &lt;!&ndash; 笔记列表 &ndash;&gt;-->
-<!--    <ListView-->
-<!--        android:id="@android:id/list"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:drawSelectorOnTop="false" />-->
-<!--    &lt;!&ndash; 在 ListView 下方添加 &ndash;&gt;-->
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab_add_note"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|end"-->
-<!--        android:layout_margin="16dp"-->
-<!--        android:src="@android:drawable/ic_menu_add" />-->
-<!--    &lt;!&ndash; 在 FloatingActionButton 旁边添加设置按钮 &ndash;&gt;-->
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab_settings"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|end"-->
-<!--        android:layout_margin="16dp"-->
-<!--        android:src="@android:drawable/ic_menu_preferences"-->
-<!--        app:backgroundTint="@color/colorAccent"-->
-<!--        app:elevation="6dp"-->
-<!--        app:pressedTranslationZ="12dp" />-->
-
-<!--    &lt;!&ndash; 在 notes_list.xml 中添加 Material Toolbar &ndash;&gt;-->
-<!--    <com.google.android.material.appbar.MaterialToolbar-->
-<!--        android:id="@+id/toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="?attr/actionBarSize"-->
-<!--        android:background="?attr/colorPrimary"-->
-<!--        android:titleTextColor="@android:color/white" />-->
-
-<!--</LinearLayout>-->

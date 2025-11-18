@@ -19,12 +19,21 @@
 <!--        <item name="windowNoTitle">true</item>-->
 <!--    </style>-->
 
+<!--    <style name="AppTheme.Dark" parent="Theme.AppCompat.DayNight">-->
+<!--        <item name="colorPrimary">#2E7D32</item>-->
+<!--        <item name="colorPrimaryDark">#1B5E20</item>-->
+<!--        <item name="colorAccent">#FF4081</item>-->
+<!--        <item name="android:windowBackground">@drawable/bg_dark</item>-->
+<!--        <item name="colorOnSurface">#FFFFFF</item> &lt;!&ndash; 设置文字颜色为白色 &ndash;&gt;-->
+<!--    </style>-->
     <style name="AppTheme.Dark" parent="Theme.AppCompat.DayNight">
         <item name="colorPrimary">#2E7D32</item>
         <item name="colorPrimaryDark">#1B5E20</item>
         <item name="colorAccent">#FF4081</item>
         <item name="android:windowBackground">@drawable/bg_dark</item>
         <item name="colorOnSurface">#FFFFFF</item> <!-- 设置文字颜色为白色 -->
+        <item name="colorControlNormal">#FFFFFF</item> <!-- 确保控件文字为白色 -->
+        <item name="colorControlActivated">#FFFFFF</item> <!-- 激活状态文字为白色 -->
     </style>
 
     <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
@@ -32,6 +41,9 @@
         <item name="colorPrimaryDark">#1B5E20</item>
         <item name="colorAccent">#FF4081</item>
         <item name="android:windowBackground">@drawable/bg_material</item>
+        <item name="colorOnSurface">#000000</item> <!-- 设置文字颜色为白色 -->
+        <item name="colorControlNormal">#000000</item> <!-- 确保控件文字为白色 -->
+        <item name="colorControlActivated">#000000</item>
     </style>
 
 

@@ -67,11 +67,16 @@
         <item name="colorAccent">#FF4081</item>
         <item name="android:windowBackground">@drawable/bg_dark</item>
         <item name="colorOnSurface">#FFFFFF</item> 
+        <item name="colorControlNormal">#FFFFFF</item> 
+        <item name="colorControlActivated">#FFFFFF</item> 
     </style>
     <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">#2E7D32</item>
         <item name="colorPrimaryDark">#1B5E20</item>
         <item name="colorAccent">#FF4081</item>
         <item name="android:windowBackground">@drawable/bg_material</item>
+        <item name="colorOnSurface">#000000</item> 
+        <item name="colorControlNormal">#000000</item> 
+        <item name="colorControlActivated">#000000</item>
     </style>
 </resources>

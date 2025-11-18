@@ -88,6 +88,10 @@
         "source": "C:\\Users\\21726\\.gradle\\daemon\\8.4\\com.example.android.notepad.app-main-30:\\drawable-hdpi\\ic_menu_edit.png"
     },
     {
+        "merged": "com.example.android.notepad.app-merged_res-28:/layout_notes_list.xml.flat",
+        "source": "com.example.android.notepad.app-main-30:/layout/notes_list.xml"
+    },
+    {
         "merged": "C:\\Users\\21726\\.gradle\\daemon\\8.4\\com.example.android.notepad.app-merged_res-28:\\drawable_bg_material.xml.flat",
         "source": "C:\\Users\\21726\\.gradle\\daemon\\8.4\\com.example.android.notepad.app-main-30:\\drawable\\bg_material.xml"
     },
@@ -110,10 +114,6 @@
     {
         "merged": "C:\\Users\\21726\\.gradle\\daemon\\8.4\\com.example.android.notepad.app-merged_res-28:\\layout_noteslist_item.xml.flat",
         "source": "C:\\Users\\21726\\.gradle\\daemon\\8.4\\com.example.android.notepad.app-main-30:\\layout\\noteslist_item.xml"
-    },
-    {
-        "merged": "com.example.android.notepad.app-merged_res-28:/layout_note_editor.xml.flat",
-        "source": "com.example.android.notepad.app-main-30:/layout/note_editor.xml"
     },
     {
         "merged": "C:\\Users\\21726\\.gradle\\daemon\\8.4\\com.example.android.notepad.app-merged_res-28:\\drawable_dialog_color_picker.xml.flat",

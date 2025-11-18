@@ -53,8 +53,8 @@ public class NoteListAdapter extends BaseAdapter {
         }
 
         if (mCursor != null && mCursor.moveToPosition(position)) {
-            TextView titleView = (TextView)convertView.findViewById(R.id.title_text);
-            TextView dateView = (TextView)convertView.findViewById(R.id.date_text);
+//            TextView titleView = (TextView)convertView.findViewById(R.id.title_text);
+//            TextView dateView = (TextView)convertView.findViewById(R.id.date_text);
             // 获取分类颜色指示器视图
             View colorIndicator = convertView.findViewById(R.id.category_color_indicator);
 
@@ -62,8 +62,8 @@ public class NoteListAdapter extends BaseAdapter {
             @SuppressLint("Range") String date = mCursor.getString(mCursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE));
             @SuppressLint("Range") String category = mCursor.getString(mCursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_CATEGORY));
 
-            titleView.setText(title);
-            dateView.setText(date);
+//            titleView.setText(title);
+//            dateView.setText(date);
 
             // 设置分类颜色
             if (colorIndicator != null) {
