@@ -1,7 +1,9 @@
 # NotePad
 This is an AndroidStudio rebuild of google SDK sample NotePad
+
 一、项目概述:
 本项目基于开源NotePad应用进行功能扩展，在原有基础笔记功能之上，增加了时间戳显示、笔记查询等基本功能，并实现了切换主题，背景颜色和笔记分类两大扩展功能。
+
 二、实验环境
 <img width="948" height="273" alt="image" src="https://github.com/user-attachments/assets/25e2c157-cc1b-450a-89e0-b73816d3e535" />
 
