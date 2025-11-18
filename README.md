@@ -53,8 +53,8 @@ NotePad记事本应用是一款基于Android平台的轻量级笔记管理工具
 
   2.2 笔记分类：实现了笔记的分类管理功能，用户可以创建不同的分类文件夹来组织笔记
   
- <img width="456" height="819" alt="096c28dfee3768ed27a82109dc54a354" src="https://github.com/user-attachments/assets/815d1678-ac2e-4164-9ec9-d49340fbf90f" />
-<img width="336" height="399" alt="497a0ee4869b67e82e33e8ee917f8d8e" src="https://github.com/user-attachments/assets/8eea3921-2a19-43cb-8f83-519bd1c2acd0" />
+ <img width="456" height="819" alt="096c28dfee3768ed27a82109dc54a354" src="https://github.com/user-attachments/assets/815d1678-ac2e-4164-9ec9-d49340fbf90f" /><img width="336" height="399" alt="497a0ee4869b67e82e33e8ee917f8d8e" src="https://github.com/user-attachments/assets/8eea3921-2a19-43cb-8f83-519bd1c2acd0" />
+ 
   如图所示，主页搜索栏下方会有当前所展示笔记的类别，点击小三角会跳出来所有分类供选择，点击某一分类后即展示当前分类下的所有笔记。
 
 <img width="462" height="810" alt="009a570bb2ad460afed7dd7653d36c21" src="https://github.com/user-attachments/assets/2d4e47b5-966b-4ae5-ae80-0aeec5eddba6" /><img width="339" height="464" alt="9062585a4b528d9e17374e8e1d2152d2" src="https://github.com/user-attachments/assets/94d0517a-06dd-4723-93f2-22d268efeabf" /> 
