@@ -1,6 +1,7 @@
 # NotePad
 This is an AndroidStudio rebuild of google SDK sample NotePad
-<img width="1002" height="312" alt="image" src="https://github.com/user-attachments/assets/1de63e9a-781f-4d62-b462-11870f174bf0" />
+<img width="1038" height="312" alt="image" src="https://github.com/user-attachments/assets/452a1688-1552-4efc-b32c-0863d02fca4b" />
+
 
 一、项目概述:
 NotePad记事本应用是一款基于Android平台的轻量级笔记管理工具，在原版开源代码基础上进行了功能扩展和界面优化，为用户提供更加完善的笔记记录和管理体验。
