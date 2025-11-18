@@ -39,7 +39,28 @@ NotePad记事本应用是一款基于Android平台的轻量级笔记管理工具
   
   2.1 UI美化：对应用界面进行了优化，包括主题设定、背景更换和编辑器优化
   
+<img width="474" height="795" alt="6d8f226560c721c6e45160b7a3721ca6" src="https://github.com/user-attachments/assets/44e17c8d-e07d-4a28-b8af-d1e6b130f574" />
+  
+  如图所示，点击主页右下方设置按钮，可进入该页面，可切换主页主题和编辑页背景颜色。
+
+<img width="396" height="762" alt="5c09b336ba0ece0a1589dfa1e7652111" src="https://github.com/user-attachments/assets/04824bf7-c039-4376-84f6-280e9203ba7f" />
+
+  浅色主题与前面所展示主页面一致，切换至深色主题之后，背景颜色会变暗，与此同时笔记列表的文字颜色会变成白色以免融入背景色。
+
+<img width="420" height="776" alt="f305dac70885cb26056d201784e3642d" src="https://github.com/user-attachments/assets/319d4612-5cb4-4366-9bcb-6bdc9f35ef67" />
+
+  切换编辑页背景颜色之后，编辑页的颜色会切换至所选择的颜色，图中所示为浅蓝色。
+
   2.2 笔记分类：实现了笔记的分类管理功能，用户可以创建不同的分类文件夹来组织笔记
+  
+<img width="336" height="399" alt="497a0ee4869b67e82e33e8ee917f8d8e" src="https://github.com/user-attachments/assets/8eea3921-2a19-43cb-8f83-519bd1c2acd0" /> <img width="456" height="819" alt="096c28dfee3768ed27a82109dc54a354" src="https://github.com/user-attachments/assets/815d1678-ac2e-4164-9ec9-d49340fbf90f" />
+
+  如图所示，主页搜索栏下方会有当前所展示笔记的类别，点击小三角会跳出来所有分类供选择，点击某一分类后即展示当前分类下的所有笔记。
+
+<img width="339" height="464" alt="9062585a4b528d9e17374e8e1d2152d2" src="https://github.com/user-attachments/assets/94d0517a-06dd-4723-93f2-22d268efeabf" /> <img width="462" height="810" alt="009a570bb2ad460afed7dd7653d36c21" src="https://github.com/user-attachments/assets/2d4e47b5-966b-4ae5-ae80-0aeec5eddba6" />
+
+  如图所示，进入笔记编辑页面，点击分类框小三角可选择当前笔记的分类，也可以添加一个新的分类。
+  
 
 四、关键代码讲解
 
