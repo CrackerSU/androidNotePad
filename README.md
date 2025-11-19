@@ -66,8 +66,45 @@ NotePad记事本应用是一款基于Android平台的轻量级笔记管理工具
 
   1.基本功能扩展
   
-    1.1 时间戳显示：在笔记列表界面中，每个笔记条目现在都会显示创建或修改的时间戳
+  1.1 时间戳实现机制
+  
+  1.1.1数据库列定义
+  
+  在 NotePad.java 文件中定义了数据库表的列名，包括创建时间和修改时间：
+  
+    public static final class Notes implements BaseColumns {
+    // ...
+    public static final String COLUMN_NAME_CREATE_DATE = "created";
+    public static final String COLUMN_NAME_MODIFICATION_DATE = "modified";
+    // ...
+    }
+
+  1.1.2在 ContentProvider 中处理时间戳
+  
+  在 NotePadProvider.java 中，当插入新笔记时会自动添加创建时间和修改时间：
+
+    // 在插入数据时设置创建时间和修改时间
+    Long now = Long.valueOf(System.currentTimeMillis());
+    // 如果没有提供创建时间，则使用当前时间
+    if (values.containsKey(NotePad.Notes.COLUMN_NAME_CREATE_DATE) == false) {
+        values.put(NotePad.Notes.COLUMN_NAME_CREATE_DATE, now);
+    }
+    // 如果没有提供修改时间，则使用当前时间
+    if (values.containsKey(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE) == false) {
+        values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, now);
+    }
     
+  1.1.3在界面显示时间戳
+
+  在 NotesList.java 中，查询并显示笔记的创建时间：
+
+    // 获取创建时间戳并格式化为日期时间字符串
+    long createDate = cursor.getLong(cursor.getColumnIndexOrThrow(NotePad.Notes.COLUMN_NAME_CREATE_DATE));
+    SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", Locale.getDefault());
+    String formattedDate = sdf.format(new Date(createDate));
+    dateView.setText(formattedDate);
+
+  
     1.2 笔记查询功能：支持根据标题或内容关键词进行快速搜索定位
 
   2.扩展功能实现
